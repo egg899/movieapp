@@ -16,7 +16,7 @@ const App = () => {
 
 //Api to bring all the movie images
   const getMovieRequest = async(searchValue) => {
-    const url = `http://www.omdbapi.com/?apikey=8ce4d3c9&s=${searchValue}`;
+    const url = `https://www.omdbapi.com/?apikey=8ce4d3c9&s=${searchValue}`;
 
 
     const response = await fetch(url);
@@ -73,7 +73,7 @@ const App = () => {
   
   //This is the Api call to get the movie info
   const getMovieInfo = (e)=>{
-    fetch(`http://www.omdbapi.com/?i=tt3896198&apikey=8ce4d3c9&t=${e}`)
+    fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8ce4d3c9&t=${e}`)
 		.then((res)=>res.json())
 		.then((result)=>setMovie(result));
 		// setQuery('');
